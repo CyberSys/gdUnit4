@@ -1,6 +1,6 @@
 name: Feature Request
 description: Suggest an idea for GdUnit4
-title: "[GD-XXX] Brief description of the feature"
+title: "GD-XXX: Brief description of the feature"
 labels: ["API"]
 projects: ["godot-gdunit-labs/3"]
 type: feature

@@ -1,6 +1,6 @@
 name: Documentation
 description: Report missing or incorrect GdUnit4 documentation
-title: "[DOC-XXX] Brief description of documentation issue"
+title: "DOC-XXX: Brief description of documentation issue"
 labels: ["documentation"]
 projects: ["godot-gdunit-labs/3"]
 type: documentation

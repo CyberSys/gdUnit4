@@ -10,8 +10,7 @@ description: Verifies and updates the pull request for the current branch — ch
 Resolve the PR from the current branch automatically:
 
 ```bash
-gh pr view --repo godot-gdunit-labs/gdUnit4 \
-  --json number,title,body,assignees,labels,projectCards,milestone,closingIssuesReferences
+gh pr view --json number,title,body,assignees,labels,projectCards,milestone,closingIssuesReferences
 ```
 
 If no PR exists for the current branch, inform the user and ask whether they want to create one.
@@ -92,9 +91,19 @@ Titles should be concise (under 72 characters), specific, and action-oriented.
 
 ### Description options — 1, 2, 3
 
-Provide three alternative descriptions. Each option shows the **full** `# Why` / `# What` block
-as it would appear in the PR — not just the Why sentence in isolation. The `# What` content may
-vary slightly between options if different framings call for it, but keep it grounded in the diff.
+Provide three alternative descriptions ordered from most detailed to most compact:
+- Option 1: Detailed — full context, explains each problem and solution thoroughly.
+- Option 2: Moderate — balanced summary, covers the key points without exhaustive detail.
+- Option 3: Compact — minimal, one tight sentence per section, just enough to understand what changed and why.
+
+Each option shows the **full** `# Why` / `# What` block as it would appear in the PR — not just the Why sentence in isolation. The `# What` content may vary slightly between options if different framings call for it, but keep it grounded in the diff.
+
+**Line wrapping:** Do NOT hard-wrap prose at any column limit. Each paragraph must be a single unbroken line. GitHub renders PR bodies as flowing Markdown, so hard wraps are noise in the raw body. Bullet points in `# What` are fine as individual lines.
+
+**Prose style for `# Why`:**
+- Use commas to separate clauses, never semicolons.
+- Write complete, flowing sentences — not fragments or comment-style phrases.
+- Do not use numbered surcharges like `(1) ...`, `(2) ...` to list problems. Weave them into prose instead.
 
 Present them like this:
 
